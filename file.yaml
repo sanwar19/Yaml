@@ -1,0 +1,57 @@
+---
+# Yaml sequence of scalars
+# Block Style
+fruits:
+  - Apples
+  - Oranges
+  - Banana
+# yaml mapping
+user:
+  name: Sanwarmal
+  age: 36
+
+# sequence of mapping 
+users:
+  - name: Sanwarmal
+    age: 36
+  - name: John
+    age: 38
+---
+# Flow style
+# Flow sequences
+Fruits: [Apple, Oranges, Banana]
+
+# Flow mapping 
+user: { name: John, age: 38 }
+
+invoice_number: 314159
+name: Santa Claus
+# Nested mapping
+address:
+  street: Santa Claus Lane
+  zip: 12345
+  city: North Pole
+---
+# Aliases / Anchors
+invoice_number: 314159
+name: Santa Claus
+
+shipping_address: &address     # Anchor &
+  street: Santa Claus Lane     # ┐
+  zip: 12345                   # │ Anchor content
+  city: North Pole             # ┘
+billing_address: *address      # Alias starts with *
+
+order_items:
+  - Sled
+  - Wrapping Paper
+
+
+# Literal Block Scalar |
+steps:
+- uses: actions/checkout@v2
+- name: Run Tests
+  run: |      # Literal Block Scalar
+    ./configure
+    make
+    make test
