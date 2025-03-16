@@ -5,5 +5,5 @@
 | Row 1    | Data     |
 | Row 2    | Data     |
 
-
-> [!CAUTION]
+> [!NOTE]
+>  [!CAUTION]
