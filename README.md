@@ -6,4 +6,4 @@
 | Row 2    | Data     |
 
 > [!NOTE]
->  [!CAUTION]
+> [!CAUTION]
